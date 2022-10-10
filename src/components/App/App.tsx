@@ -8,9 +8,8 @@ import './App.scss';
 const App = () => {
     return (
       <div className='wrapper'>
-        <h1>Task Manager</h1>
-        <TaskList/>
         <AddTask/>
+        <TaskList/>
       </div>
     );
 }

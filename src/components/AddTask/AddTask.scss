@@ -3,6 +3,18 @@
 .form {
     display: flex;
     justify-content: space-between;
+    background-color: $add-task-form;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    max-width: 480px;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 10px;
+    z-index: 1;
     
     &__input {
         background: #FFFFFF;
@@ -11,6 +23,10 @@
         padding: 15px;
         width: 60%;
         outline: none;
+
+        &:hover {
+            box-shadow: 0 0 7px 2px $add-task-hover;
+        }
 
         &::placeholder {
             color: $input-placeholder-color;
@@ -25,5 +41,9 @@
         width: 45px;
         height: 45px;
         cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 7px 2px $add-task-hover;
+        }
     }
 }
