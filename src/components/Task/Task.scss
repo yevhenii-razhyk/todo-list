@@ -1,0 +1,76 @@
+@import '../../styles/index.scss';
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $delete-button-color;
+        border-radius: 10px;
+        background-color: $delete-button-color;
+        margin-left: 20px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #FFFFFF;
+        }
+
+        &:hover svg path {
+            fill: $delete-button-color
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__description {
+        display: inline-flex;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+        word-wrap: anywhere;
+
+        &::before {
+            content: "";
+            width: 22px;
+            height: 22px;
+            border: 2px solid $check-color;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        & svg {
+            position: absolute;
+                top: 50%;
+                left: 5px;
+                display: none;
+                transform: translateY(-50%);
+        }
+        .task__input:checked + & svg {
+            display: block;
+        }
+    }
+}
